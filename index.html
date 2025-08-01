@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>จองงาน</title>
+<style>
+body {
+font-family: sans-serif;
+background: #f8f9fa;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+.container {
+background: white;
+padding: 20px;
+border-radius: 15px;
+width: 90%;
+max-width: 400px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+h2 {
+text-align: center;
+margin-bottom: 15px;
+color: #333;
+}
+input, button {
+width: 100%;
+padding: 12px;
+margin: 8px 0;
+border-radius: 8px;
+border: 1px solid #ccc;
+font-size: 16px;
+}
+button {
+background: #28a745;
+color: white;
+border: none;
+cursor: pointer;
+}
+button:hover {
+background: #218838;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<h2>จองงาน</h2>
+<form action="https://formspree.io/f/mnnzzrqw" method="POST">
+<input type="text" name="name" placeholder="ชื่อของคุณ" required>
+<input type="text" name="contact" placeholder="การติดต่อ (เบอร์โทร / ไลน์ / อีเมล)" required>
+<button type="submit">จอง</button>
+</form>
+</div>
+
+</body>
+</html>
