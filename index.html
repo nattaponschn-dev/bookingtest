@@ -6,55 +6,77 @@
 <title>จองงาน</title>
 <style>
 body {
-font-family: sans-serif;
-background: #f8f9fa;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-margin: 0;
+  font-family: sans-serif;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 .container {
-background: white;
-padding: 20px;
-border-radius: 15px;
-width: 90%;
-max-width: 400px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 h2 {
-text-align: center;
-margin-bottom: 15px;
-color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
 }
-input, button {
-width: 100%;
-padding: 12px;
-margin: 8px 0;
-border-radius: 8px;
-border: 1px solid #ccc;
-font-size: 16px;
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
 }
 button {
-background: #28a745;
-color: white;
-border: none;
-cursor: pointer;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 button:hover {
-background: #218838;
+  background: #218838;
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-<h2>จองงาน</h2>
-<form action="https://formspree.io/f/mnnzzrqw" method="POST">
-<input type="text" name="name" placeholder="ชื่อของคุณ" required>
-<input type="text" name="contact" placeholder="การติดต่อ (เบอร์โทร / ไลน์ / อีเมล)" required>
-<button type="submit">จอง</button>
-</form>
+  <h2>จองงาน</h2>
+  <form action="https://formspree.io/f/mnnzzrqw" method="POST">
+    <!-- ชื่อสมมติ -->
+    <input type="text" name="nickname" placeholder="ชื่อสมมติ" required>
+
+    <!-- การติดต่อ -->
+    <input type="text" name="contact" placeholder="การติดต่อ (เบอร์โทร / ไลน์ / อีเมล)" required>
+
+    <!-- วันที่ -->
+    <label for="date">เลือกวันที่</label>
+    <input type="date" name="date" id="date" required>
+
+    <!-- ช่วงเวลา -->
+    <label for="time">เลือกช่วงเวลา</label>
+    <select name="time" id="time" required>
+      <option value="">-- กรุณาเลือก --</option>
+      <option value="15:00">15:00 - 16:00</option>
+      <option value="16:00">16:00 - 17:00</option>
+      <option value="17:00">17:00 - 18:00</option>
+      <option value="18:00">18:00 - 19:00</option>
+      <option value="19:00">19:00 - 20:00</option>
+      <option value="20:00">20:00 - 21:00</option>
+      <option value="21:00">21:00 - 22:00</option>
+    </select>
+
+    <!-- ปุ่มจอง -->
+    <button type="submit">จอง</button>
+  </form>
 </div>
 
 </body>
